@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySpace - Apprendre autrement</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Barre latérale -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span>✦</span> StudySpace
+            </div>
+
+            <p class="menu-title">MENU PRINCIPAL</p>
+
+            <nav>
+                <button class="nav-button active" data-section="dashboard">
+                    🏠 Tableau de bord
+                </button>
+
+                <button class="nav-button" data-section="flashcards">
+                    📚 Fiches de révision
+                </button>
+
+                <button class="nav-button" data-section="quiz">
+                    🎯 Mes quiz
+                </button>
+
+                <button class="nav-button" data-section="statistics">
+                    📊 Statistiques
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Apprendre chaque jour, progresser toujours ✨</p>
+            </div>
+
+        </aside>
+
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="welcome">BIENVENUE SUR STUDYSPACE</p>
+                    <h1>Bonjour et bienvenue ! 👋</h1>
+                    <p class="subtitle">
+                        Prêt(e) à apprendre quelque chose de nouveau ?
+                    </p>
+                </div>
+
+                <div class="profile">
+                    <span>🎓</span>
+                </div>
+            </header>
+
+
+            <!-- Tableau de bord -->
+            <section id="dashboard" class="page-section active">
+
+                <div class="section-heading">
+                    <h2>Mon tableau de bord</h2>
+                    <p>Voici un aperçu de ton apprentissage.</p>
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <span class="stat-icon purple">📚</span>
+                        <p>Mes fiches</p>
+                        <h3 id="totalFlashcards">0</h3>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon orange">🎯</span>
+                        <p>Quiz réalisés</p>
+                        <h3 id="totalQuizzes">0</h3>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon green">🏆</span>
+                        <p>Meilleur score</p>
+                        <h3 id="bestScore">0%</h3>
+                    </div>
+
+                </div>
+
+                <div class="welcome-card">
+                    <div>
+                        <p class="card-label">TON ESPACE D'APPRENTISSAGE</p>
+                        <h2>Chaque révision te rapproche de ton objectif !</h2>
+                        <p>
+                            Crée tes fiches, teste tes connaissances
+                            et suis tes progrès.
+                        </p>
+                    </div>
+
+                    <span class="welcome-emoji">🚀</span>
+                </div>
+
+                <div class="quick-actions">
+                    <h2>Que souhaites-tu faire aujourd'hui ?</h2>
+
+                    <div class="action-grid">
+
+                        <button class="action-card" data-section="flashcards">
+                            <span>📝</span>
+                            <h3>Créer une fiche</h3>
+                            <p>Mémorise les notions importantes.</p>
+                        </button>
+
+                        <button class="action-card" data-section="quiz">
+                            <span>🎮</span>
+                            <h3>Faire un quiz</h3>
+                            <p>Teste tes connaissances.</p>
+                        </button>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Fiches de révision -->
+            <section id="flashcards" class="page-section">
+
+                <div class="section-heading">
+                    <h2>Mes fiches de révision</h2>
+                    <p>Apprends et mémorise à ton rythme.</p>
+                </div>
+
+                <div class="content-placeholder">
+                    <span>📚</span>
+                    <h3>Mes futures fiches de révision</h3>
+                    <p>Nous allons bientôt pouvoir créer et consulter tes fiches.</p>
+                </div>
+
+            </section>
+
+
+            <!-- Quiz -->
+            <section id="quiz" class="page-section">
+
+                <div class="section-heading">
+                    <h2>Mes quiz</h2>
+                    <p>Teste tes connaissances et relève des défis.</p>
+                </div>
+
+                <div class="content-placeholder">
+                    <span>🎯</span>
+                    <h3>Prêt(e) à relever le défi ?</h3>
+                    <p>Nous allons bientôt construire ton premier quiz.</p>
+                </div>
+
+            </section>
+
+
+            <!-- Statistiques -->
+            <section id="statistics" class="page-section">
+
+                <div class="section-heading">
+                    <h2>Mes statistiques</h2>
+                    <p>Découvre tes progrès au fil du temps.</p>
+                </div>
+
+                <div class="content-placeholder">
+                    <span>📊</span>
+                    <h3>Ton évolution apparaîtra ici</h3>
+                    <p>Tu pourras suivre tes performances après tes premiers quiz.</p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
