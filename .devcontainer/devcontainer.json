@@ -1,0 +1,12 @@
+
+{
+  "name": "Ma To Do List",
+  "forwardPorts": [5500],
+  "portsAttributes": {
+    "5500": {
+      "label": "Ma To Do List",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postStartCommand": "nohup python3 -m http.server 5500 --bind 0.0.0.0 >/tmp/todo-server.log 2>&1 </dev/null &"
+}

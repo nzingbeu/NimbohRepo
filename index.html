@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header">
+            <div>
+                <p class="subtitle">MON ORGANISATION</p>
+                <h1>Ma To Do List <span>✦</span></h1>
+                <p class="description">Organise tes journées, une tâche à la fois.</p>
+            </div>
+            <div class="date" id="currentDate"></div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-icon">📋</span>
+                <div>
+                    <p>Total des tâches</p>
+                    <h2 id="totalTasks">0</h2>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">⏳</span>
+                <div>
+                    <p>À terminer</p>
+                    <h2 id="remainingTasks">0</h2>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">✅</span>
+                <div>
+                    <p>Terminées</p>
+                    <h2 id="completedTasks">0</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-info">
+                <span>Progression de la journée</span>
+                <strong id="progressPercent">0%</strong>
+            </div>
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Ajouter une tâche</h2>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Ex : Préparer ma présentation..."
+                    maxlength="120"
+                    required
+                >
+                <select id="priorityInput" aria-label="Priorité">
+                    <option value="low">Basse</option>
+                    <option value="medium" selected>Moyenne</option>
+                    <option value="high">Haute</option>
+                </select>
+                <button type="submit" class="add-button">
+                    + Ajouter
+                </button>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <div class="list-header">
+                <h2>Mes tâches</h2>
+                <button id="clearCompleted" class="clear-button">
+                    Effacer les terminées
+                </button>
+            </div>
+
+            <div class="filters">
+                <button class="filter active" data-filter="all">Toutes</button>
+                <button class="filter" data-filter="active">À faire</button>
+                <button class="filter" data-filter="completed">Terminées</button>
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                Aucune tâche ici pour le moment. Profite de ce moment ! 🎉
+            </p>
+        </section>
+
+        <footer>
+            <p>Fait avec ♥ pour mieux organiser tes journées.</p>
+            <p>Les tâches sont sauvegardées dans ton navigateur.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
